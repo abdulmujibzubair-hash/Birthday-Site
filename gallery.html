@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Zubair's Birthday</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">🎂 <span style="font-size: 30px;">Zubayr</span> <span style="font-size: 25px; color: red;">Academy</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="wish.html">Birthday Wishes</a></li>
+                <li><a href="aboutus.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h1>📸 Birthday Gallery</h1>
+        <div class="gallery-grid">
+            <img src="images/img1.jpg" alt="Birthday Image 1" onclick="openLightbox(0)">
+            <img src="images/img2.jpg" alt="Birthday Image 2" onclick="openLightbox(1)">
+            <img src="images/img3.jpg" alt="Birthday Image 3" onclick="openLightbox(2)">
+            <img src="images/img4.jpg" alt="Birthday Image 4" onclick="openLightbox(3)">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Zubair Abdulmujib — Made with ❤️</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

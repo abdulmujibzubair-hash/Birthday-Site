@@ -1,0 +1,379 @@
+/* Reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 0;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f9d423, #ff4e50);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Countdown styling */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.countdown .time-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #ff4e50;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 80px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* About Preview Section */
+.about-preview {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+}
+
+.about-preview .btn {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+}
+
+.gallery h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ff4e50;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+/* Lightbox overlay */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-img {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover { color: #ff4e50; }
+
+
+/* RSVP / Wishes Section */
+.rsvp {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f9d423, #ff4e50);
+    color: white;
+    min-height: 80vh;
+}
+
+.rsvp h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.rsvp p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+/* Form Styling */
+.rsvp form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.rsvp input, .rsvp textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rsvp input:focus, .rsvp textarea:focus {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Button Styling */
+.rsvp .btn {
+    background-color: white;
+    color: #ff4e50;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+.rsvp .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background: red;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .rsvp h1 {
+        font-size: 2rem;
+    }
+
+    .rsvp p {
+        font-size: 1rem;
+    }
+
+    .rsvp input, .rsvp textarea {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+
+    .rsvp .btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+
+/* About Me Section */
+.about-me {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #32cd32, #00bfff);
+    color: white;
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+.about-me h1 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    position: relative;
+    display: inline-block;
+}
+.sparkle::after {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    opacity: 0;
+    animation: sparkleAnim 2s infinite;
+    font-size: 1.5rem;
+}
+@keyframes sparkleAnim {
+    0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
+}
+
+/* About content layout */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: bounceGlow 3s ease-in-out infinite;
+}
+
+@keyframes bounceGlow {
+    0%,100% { transform: translateY(0) scale(1); box-shadow:0 5px 15px rgba(0,0,0,0.3),0 0 10px rgba(255,255,255,0); }
+    50% { transform: translateY(-15px) scale(1.05); box-shadow:0 10px 20px rgba(0,0,0,0.3),0 0 20px rgba(255,255,255,0.7); }
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .about-content { flex-direction: column; text-align: center; }
+    .about-text { text-align: center; }
+    .profile-pic { width: 150px; height: 150px; }
+}
+
+
+/* Fade-in animation for About Me paragraphs */
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.about-text p:nth-child(1) { animation-delay: 0.3s; }
+.about-text p:nth-child(2) { animation-delay: 0.6s; }
+.about-text p:nth-child(3) { animation-delay: 0.9s; }
+.about-text p:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
