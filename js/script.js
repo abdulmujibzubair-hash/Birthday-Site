@@ -88,24 +88,47 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-let currentIndex = 0;
-const images = [
-    "images/img1.jpg",
-    "images/img2.jpg",
-    "images/img3.jpg",
-    "images/img4.jpg"
-    // Add more image paths if needed
+// Image list (VERY IMPORTANT)
+let images = [
+    "images/CEO ABDULMUJIB.jpg",
+    "images/WhatsApp Image 2025-11-18 at 23.23.03_fe83b488.jpg",
+    "images/WhatsApp Image 2025-11-18 at 23.23.04_5c2a4792.jpg",
+    "images/WhatsApp Image 2025-11-18 at 23.50.19_48453b5a.jpg",
+    "images/WhatsApp Image 2025-11-20 at 22.21.54_60213894.jpg",
+    "images/WhatsApp Image 2025-11-20 at 22.21.54_0fc55fe8.jpg",
+    "images/img7.jpg",
+    "images/img8.jpg"
 ];
 
+let currentIndex = 0;
+
+// Open lightbox
 function openLightbox(index) {
     currentIndex = index;
     document.getElementById("lightbox").style.display = "block";
     document.getElementById("lightbox-img").src = images[currentIndex];
 }
 
+// Close lightbox
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
+
+// Next / Previous
+function changeSlide(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
+    document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+
+
 
 function changeSlide(n) {
     currentIndex += n;
